@@ -12,8 +12,10 @@ Rails.application.routes.draw do
     get '/dashboard/search', to: 'dashboards#search', as: :dashboard_search
 
     # Discussions Routes
-    get '/discussions/inbox', to: 'discussions#inbox', as: :discussions_inbox
-    get '/discussions/chat', to: 'discussions#chat', as: :discussions_chat
+    get '/portfolio/stats', to: 'portfolios#stats', as: :portfolio_stats
+    get '/portfolio/players', to: 'portfolios#players', as: :portfolio_players
+    get '/portfolio/expiry', to: 'portfolios#expiry', as: :portfolio_expiry
+
 
     # Todos Routes
     get '/todos/lists', to: 'todos#lists', as: :todos_lists
