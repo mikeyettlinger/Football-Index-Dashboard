@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem "watir", "~> 6.16"
 # gem 'webdrivers', '~> 4.0'
 
+gem 'rest-client'
 
 
 
