@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function () {
     -------------------------------------------------*/
     var options = {
         chart: {
-            width: '100%',
+            width: '90%',
             height: 430,
             type: 'pie',
         },
@@ -21,9 +21,6 @@ $(document).on('turbolinks:load', function () {
         responsive: [{
             breakpoint: 480,
             options: {
-                chart: {
-                    width: 200
-                },
                 legend: {
                     position: 'bottom'
                 }
@@ -39,7 +36,13 @@ $(document).on('turbolinks:load', function () {
         options
     );
 
+    var chart1 = new ApexCharts(
+        document.querySelector("#apex-simple-pie-chart-1"),
+        options
+    );
+
     chart.render();
+    chart1.render();
 
 
     /* 02. Simple Donut Chart Js
@@ -69,7 +72,7 @@ $(document).on('turbolinks:load', function () {
         document.querySelector("#apex-simple-donut-chart"),
         options
     );
-    
+
     chart.render();
 
 
