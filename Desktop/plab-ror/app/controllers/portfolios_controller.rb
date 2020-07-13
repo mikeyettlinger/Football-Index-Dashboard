@@ -1,55 +1,44 @@
 class PortfoliosController < ApplicationController
 
-    def players
+  def players
+    require 'open-uri'
+    require 'nokogiri'
 
-      require 'open-uri'
-      require 'nokogiri'
+    require 'webdrivers'
 
-      # url = "https://www.footballindexedge.com/price-master-q3-2020"
+    browser = Watir::Browser.new
+    browser.goto('https://www.footballindex.co.uk/top-200?login=true')
+    # Login
+    modal = browser.div(id: 'modal-container').wait_until_present
+    modal.text_field(placeholder: "Email address").set 'mikeyettlinger@gmail.com'
+    modal.text_field(placeholder: "Password").set 'mikey125'
+    modal.button(id: 'login').click
 
-      # html_file = open(url).read
-      # @html_doc = Nokogiri::HTML(html_file)
+    links = []
 
-      # dir = "https://www.footballindex.co.uk/portfolio"
-      # doc = Nokogiri::HTML(open(dir))
-      # @table = doc.search('div.Row__row___qFVrH')
-      # @table1 = doc.xpath("//div[@class='Row__row___qFVrH']")
-      # @table1 = doc.search('div.row').children
-
-      require 'webdrivers'
-
-
-      browser = Watir::Browser.new
-      browser.goto('https://www.footballindex.co.uk/top-200?login=true')
-      # browser.goto('https://www.footballindex.co.uk/portfolio')
-      # browser.element(name: "TopBar__topbar__login__loginBtn___Jm9DY").click
-      # Inputs__input___1sG_6  Inputs__input__alwaysShowPlaceholder___EVCvy
-      modal = browser.div(id: 'modal-container').wait_until_present
-      modal.text_field(placeholder: "Email address").set 'mikeyettlinger@gmail.com'
-      modal.text_field(placeholder: "Password").set 'mikey125'
-      modal.button(id: 'login').click
-      browser.goto('https://www.footballindex.co.uk/portfolio')
-
-
-      # portfolio = []
-      # players = []
-
-      # browser.divs.each do |div|      #for each div on the page
-      #   if div.class == "Pic__container__name__26P8X".wait_until(&:present?)      #if the class == "error"
-      #      portfolio << div    #add it to our array
-      #      raise
-      #   end
-      #   if div.class == "Row__row___qFVrH"       #if the class == "error"
-      #      players << div    #add it to our array
-      #      raise
-      #   end
-      # end
+    # find the 'Portfolio button'
+    browser.as.each do |link|
+      links << link
     end
 
-    def stats
+    # click the 'Portfolio button'
+    links[12].wait_until_present.click
+
+    @portfolio = []
+    players = []
+
+    browser.divs.each do |div|
+      if div.class == "Pic__container__name__26P8X".wait_until(&:present?)
+         @portfolio << div.text
+      end
     end
 
-    def expiry
-    end
+end
+
+def stats
+end
+
+def expiry
+end
 
 end
