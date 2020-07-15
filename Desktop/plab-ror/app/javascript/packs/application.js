@@ -31,7 +31,6 @@ require("packs/apex-charts/leads-stats")
 require("packs/apex-charts/apex-column-charts")
 require("packs/apex-charts/custom-chart")
 require("packs/custom")
-require ("packs/edge")
 
 
 

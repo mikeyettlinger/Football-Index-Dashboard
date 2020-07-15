@@ -138,6 +138,9 @@
 
                 <!-- File path: assets/js/apex-charts/order-summary.js -->
                 <div id="order-summary"></div>
+                <%= content_tag "div", id: "y-axis", data: {values: @price} do %>
+                    <% @price %>
+                <% end %>
             </div>
         </div>
     </div>

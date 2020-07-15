@@ -1,5 +1,6 @@
 import ApexCharts from 'apexcharts';
 $(document).on('turbolinks:load', function () {
+  // var pricedata = document.getElementById('y-axis').dataset.values.slice(1, -1).split(',').map(Number)
     var options = {
         chart: {
             height: 350,
@@ -13,8 +14,8 @@ $(document).on('turbolinks:load', function () {
             width: 3,
         },
         series: [{
-            name: 'Portfolio Value',
-            data: [160, 180, 150, 190, 160, 220, 290, 250, 300, 330]
+            name: 'Alexander-Arnold',
+            data: [10, 20, 73, 40, 50, 150, 112, 150, 141, 145]
         }, {
             name: 'Total Dividends',
             data: [50, 60, 70, 80, 90, 110, 112, 140, 141, 145]
