@@ -47,7 +47,7 @@
                         </div>
                         <div class="ml-15">
                             <p class="mb-7 line-height-1">Largest Exposure By Player</p>
-                            <h4 class="mb-0 fs-20"><%= "#{@portfolio.sort_by! { |hsh| hsh[:buyingvalue] }.last[:name]}: #{number_to_currency(@portfolio.sort_by! { |hsh| hsh[:buyingvalue] }.last[:buyingvalue], unit: "£")}"  %></h4>
+                            <h4 class="mb-0 fs-20">530,890</h4>
                         </div>
                         <span class="badge badge-cyan fs-12 position-right">
                             <i class="icofont-swoosh-up"></i>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="ml-15">
                             <p class="mb-7 line-height-1">Most Shares</p>
-                            <h4 class="mb-0 fs-20"><%= "#{@portfolio.sort_by! { |hsh| hsh[:quantity] }.last[:name]}: #{@portfolio.sort_by! { |hsh| hsh[:quantity] }.last[:quantity]} shares"  %></h4>
+                            <h4 class="mb-0 fs-20">25,890</h4>
                         </div>
                         <span class="badge badge-cyan fs-12 position-right">
                             <i class="icofont-swoosh-up"></i>
@@ -94,8 +94,8 @@
                             <i data-feather="user"></i>
                         </div>
                         <div class="ml-15">
-                            <p class="mb-7 line-height-1">Average Holding Size</p>
-                            <h4 class="mb-0 fs-20"><%= number_to_currency((@portfolio.map { |h| h[:buyingvalue] }.sum / @portfolio.count ), unit: "£")%></h4>
+                            <p class="mb-7 line-height-1">Average Age</p>
+                            <h4 class="mb-0 fs-20">42.7%</h4>
                         </div>
                         <span class="badge badge-red fs-12 position-right">
                             <i class="icofont-swoosh-down"></i>
@@ -111,7 +111,7 @@
                         </div>
                         <div class="ml-15">
                             <p class="mb-7 line-height-1">Profit if Instant Sold</p>
-                            <h4 class="mb-0 fs-20">52.75%</h4>
+                            <h4 class="mb-0 fs-20">52.7%</h4>
                         </div>
                         <span class="badge badge-red fs-12 position-right">
                             <i class="icofont-swoosh-down"></i>
