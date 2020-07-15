@@ -31,11 +31,6 @@ require("packs/apex-charts/leads-stats")
 require("packs/apex-charts/apex-column-charts")
 require("packs/apex-charts/custom-chart")
 require("packs/custom")
-require ("packs/edge")
-
-
-
-
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -43,4 +38,3 @@ require ("packs/edge")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
