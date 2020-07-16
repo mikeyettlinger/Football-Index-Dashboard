@@ -6,12 +6,12 @@ This files table contents are outlined below >>>>>
 03. Annotations Line Chart JS
 04. Gradient Line Chart JS
 05. Dashed Line Chart JS
-06. Spline Area Charts 
+06. Spline Area Charts
 */
 import ApexCharts from 'apexcharts';
 import * as series from '../apex-charts/apexcharts-stock-prices.json';
 $(document).on('turbolinks:load', function () {
-    /* 01. Basic Line Chart JS 
+    /* 01. Basic Line Chart JS
     -------------------------------------------------*/
     var options = {
         chart: {
@@ -51,13 +51,13 @@ $(document).on('turbolinks:load', function () {
     }
 
     var chart = new ApexCharts(
-        document.querySelector("#apex-basic-line-chart"),
+        document.querySelector("#apex-basic-line-chart-1"),
         options
     );
 
     chart.render();
 
-    /* 02. Line with Data Labels JS 
+    /* 02. Line with Data Labels JS
     -------------------------------------------------*/
     var options = {
         chart: {
@@ -131,7 +131,7 @@ $(document).on('turbolinks:load', function () {
 
     chart.render();
 
-    /* 03. Annotations Line Chart JS 
+    /* 03. Annotations Line Chart JS
     -------------------------------------------------*/
     var options = {
         annotations: {
@@ -234,7 +234,7 @@ $(document).on('turbolinks:load', function () {
 
     chart.render();
 
-    /* 04. Gradient Line Chart JS 
+    /* 04. Gradient Line Chart JS
     -------------------------------------------------*/
     var options = {
         chart: {
@@ -250,7 +250,7 @@ $(document).on('turbolinks:load', function () {
             },
         },
         stroke: {
-            width: 7,   
+            width: 7,
             curve: 'smooth'
         },
         series: [{
@@ -296,7 +296,7 @@ $(document).on('turbolinks:load', function () {
             max: 40,
             title: {
                 text: 'Engagement',
-            },                
+            },
         }
     }
 
