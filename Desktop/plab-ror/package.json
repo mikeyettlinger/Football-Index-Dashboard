@@ -10,7 +10,7 @@
     "bootstrap": "^4.4.1",
     "feather-icons": "^4.24.1",
     "jquery": "^3.5.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "popper.js": "^1.16.0",
     "turbolinks": "^5.2.0"
   },
